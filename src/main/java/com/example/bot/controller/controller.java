@@ -8,7 +8,7 @@ public class  controller {
     brain brain=new brain();
     @GetMapping("/isvalid/{id}")
     public apiresp isValid(@PathVariable String id){
-        return brain.getData();
+        return brain.getData(id);
     }
 
 }
