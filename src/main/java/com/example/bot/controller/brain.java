@@ -2,6 +2,8 @@ package com.example.bot.controller;
 
 import java.util.ArrayList;
 
+import com.example.bot.model.Data;
+
 public class brain {
     apiresp resp;
     ArrayList<String> list;
@@ -17,14 +19,18 @@ public class brain {
         for(String s:list){
         if(id.equals(s)){
         resp=new apiresp();
-        resp.setData("This is dummy data");
         resp.setExists("true");
         resp.setStatuscode("200");
+        Data data=new Data();
+        data.setMaturityDate("31/12/2020");
+        data.setNpiNumber("0987658767");
+        data.setSsnNumber("347-3274132");
+        data.setUserName("Mr. Dummy");
+        resp.data=data;
         return resp;
         }
     }
     resp=new apiresp();
-        resp.setData("Data is not available");
         resp.setExists("false");
         resp.setStatuscode("404");
         return resp;

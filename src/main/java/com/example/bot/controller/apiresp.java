@@ -1,16 +1,15 @@
 package com.example.bot.controller;
+
+import com.example.bot.model.Data;
+
 public class apiresp {
     private String statuscode;
     private String exists;
-    private String data;
+    public Data data;
+
+
     public String getStatuscode() {
         return statuscode;
-    }
-    public String getData() {
-        return data;
-    }
-    public void setData(String data) {
-        this.data = data;
     }
     public String getExists() {
         return exists;
